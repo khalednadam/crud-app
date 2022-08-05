@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {FC, useState} from 'react';
 import './App.css';
+import { Users } from './components/users/Users';
+import { Routes, Route } from 'react-router-dom';
+import { Add } from './components/add/Add';
+import { Update } from './components/update/Update';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+export type UserType = {
+    id: string,
+    name: string,
+    lastName: string,
+    username: string
+};
+
+export const App: FC = () =>{
+    const [users, setUsers] = useState<UserType[]>([]);
+    const handleSet = (arg: UserType) =>{
+        users.push(arg);
+    }
+    
+    const handleDelete = (id: string) =>{
+        let newUsers: UserType[];
+        newUsers = users.filter(user => user.id !== id);
+        setUsers(newUsers);
+    }
+
+   
+
+    
+    return (
+        <div className="App">
+            <h1 className='header'>React Crud App</h1>
+            <Routes>
+                <Route path='/' element={<Users users={users} handleDelete={handleDelete}/>}/>
+                <Route path='/add' element={<Add handleSet={handleSet}/>}/>
+                <Route path='/edit/:userId' element={<Update users={users} setUsers={setUsers} />} />
+            </Routes>
+        </div>
   );
 }
 

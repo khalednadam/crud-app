@@ -1,0 +1,38 @@
+.users-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+}
+.users{
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+.add-button{
+    display: flex;
+    color: #282c34;
+    
+    background-color: #61dafb;
+    width: 70%;
+    margin: auto auto 50px auto;
+    height: 45px;
+    justify-content: center;
+    align-items: center;   
+}
+
+.clickable-add-user > a{
+    text-decoration: none;
+
+}
+
+.add-button:hover{
+    background-color: #4299b1;
+    transition: all 200ms ease-in-out;
+    color: #F6F6F6;
+}
+.clickable-add-user{
+    cursor: pointer;
+}

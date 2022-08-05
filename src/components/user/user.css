@@ -1,0 +1,50 @@
+.user{
+    background-color: #F6F6F6;
+    width: 250px;
+    height: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+.edit{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F2DF3A;
+    text-align: center;
+}
+.edit > a{
+    text-decoration: none;
+}
+.edit:hover{
+    background-color: #bbad2e;
+    transition: all 100ms ease-in-out;
+}
+
+.remove{
+    background-color: red;
+    width: 100%;
+    color: #F6F6F6;
+    text-align: center;
+}
+.remove:hover{
+    background-color: #c00202;
+    transition: all 100ms ease-in-out;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.buttons > a{
+    text-decoration: none;
+}
+.buttons{
+    height: 30px;
+}
