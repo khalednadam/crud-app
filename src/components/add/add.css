@@ -57,3 +57,16 @@
     transition: all 200ms ease-in-out;
     color: #F6F6F6;
 }
+.input{
+    font-family: 'Roboto';
+    font-weight: bold;
+    padding-left: 10px;
+}
+.input::placeholder{
+    padding-left: 20px;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+.input:focus{
+    outline: #21325E 2.5px solid;
+}
